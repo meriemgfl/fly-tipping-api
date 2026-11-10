@@ -20,7 +20,7 @@ class AuthController extends Controller
         ]);
 
         return response()->json([
-            'token'=> $user->createToken('api')->plaintextToken;
+            'token'=> $user->createToken('api')->plaintextToken,
         ]);
        }
     }
