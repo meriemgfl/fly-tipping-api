@@ -14,6 +14,11 @@ class WardResource extends JsonResource
      */
     public function toArray(Request $request): array
     {
-        return parent::toArray($request);
+        return[
+            'id' => $this->id,
+            'slug' => $this->slug,
+            'name'=> $this->name,
+            'incidents_count' => $this->public_incidents_count ?? 0,
+        ];
     }
 }
